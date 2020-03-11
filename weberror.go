@@ -9,7 +9,7 @@ type Error struct {
 }
 
 // ToJSON returns the JSON string of the error struct.
-// Note: Empty Code or Message will be ommited.
+// Note: Empty Code or Message will be omitted.
 func (w Error) ToJSON() []byte {
 	result, _ := json.Marshal(w)
 
