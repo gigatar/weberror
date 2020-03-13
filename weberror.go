@@ -15,3 +15,10 @@ func (w Error) ToJSON() []byte {
 
 	return result
 }
+
+// Error() implements the error.Error interface.
+func (w Error) Error() string {
+	result, _ := json.MarshalIndent(w, " ", " ")
+
+	return string(result)
+}
